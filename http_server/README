@@ -1,0 +1,47 @@
+
+Description
+
+    Write an application that reports the CPU usage of all processes
+    on the server (similar to 'top').  The application should listen
+    on port 8845 for HTTP GET requests. When it gets a request for
+    /cpu_usage, it should return a proper HTTP response containing the
+    set of processes with their usage. Requests for any other resource
+    should result in a 404 error. It is okay for the process data to
+    be cached, but it should not be more than 1 second old. The information
+    should be transmitted using a suitable data structure represented
+    in JSON format. Please document the format of the response in the
+    README file. The application can be written in the language of your
+    choice.
+
+Deliverables
+
+    * Working code. 
+    * README file with build and run instructions.
+    * State your assumptions.
+    * State how many hours it actually took you to complete your work.
+
+
+Build
+     * import source code to eclipse to compile. Default eclipse 3.8 (with CDT) setting should build it successfully
+
+Dependency
+     * Boost lib
+
+Assumption and Limitation
+
+     * For proving concept and implemenation convenience, assume the reasonable number of clients. There is no handling for large number of concurrent access.
+     * only simulate top utility output in browser or other http client (not provided). 
+
+Run:
+     * After build successfully, go to debug dir and type:
+     ./ http_server localhost (or other valid hostname)
+
+Test:
+     * open your browser to test against the server. HTTP request: http://localhost:8845/cpu_usage
+
+Note:
+      * Most of part of code are from boost lib. 
+
+
+
+
